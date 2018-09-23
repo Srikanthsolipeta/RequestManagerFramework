@@ -11,7 +11,7 @@ import Foundation
 public class RequestManager {
     public static let shared = RequestManager()
     
-    func makeRequest(url : String,_ completion: @escaping ([Animal])->()) {
+    public func makeRequest(url : String,_ completion: @escaping ([Animal])->()) {
         var animals: [Animal]?
         if let Url = URL(string: url) {
             URLSession.shared.dataTask(with: Url){ (data, response, error) in

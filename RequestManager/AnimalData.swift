@@ -12,7 +12,7 @@ struct Animals: Decodable {
     var animals: [Animal]?
 }
 
-struct Animal: Decodable {
+public struct Animal: Decodable {
     let name, imageURL , discription : String?
     
     enum CodingKeys: String, CodingKey {
